@@ -1,6 +1,6 @@
-# Starter kit to use Gulp with Less.
+# Starter kit to use Gulp with Less and Sass.
 ====================================
-A super clean and easy to use starter kit for using Gulp and Less. This should help you repurpose Gulp and Less for your own projects.
+A super clean and easy to use starter kit for using Gulp, Sass and Less. This should help you repurpose Gulp and Less for your own projects.
 
 - Read the article: : http://scotch.io/tutorials/getting-started-with-less
 - Watch the video: https://www.youtube.com/watch?v=5nqWhwsMQqs
