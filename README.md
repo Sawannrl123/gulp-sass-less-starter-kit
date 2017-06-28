@@ -33,11 +33,7 @@ A super clean and easy to use starter kit for using Gulp and Less. This should h
     
 After, run
 
-    $ gulp
-    
-Or 
-
-    $ gulp server
+    $ npm run start
     
 ...if you need a local server. Folder **build** serving at [http://localhost:8888](http://localhost:8888)
 
