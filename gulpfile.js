@@ -106,7 +106,7 @@ gulp.task('watch', function () {
 // Folder "/" serving at http://localhost:8888
 // Should use Livereload (http://livereload.com/extensions/)
 gulp.task('serve', function () {
-    var server = plugins.serve.static('/build', 8888);
+    var server = plugins.serve.static('/build', 3000);
     server.start();
     gulp.watch(['build/*'], function (file) {
         server.notify.apply(server, [file]);

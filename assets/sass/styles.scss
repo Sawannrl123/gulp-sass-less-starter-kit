@@ -1,6 +1,7 @@
+@import 'custom-sass/variables';
+@import 'custom-sass/mixins';
 @import 'grid/simple-grid';
 @import 'icon/icon';
-
-a {
-	color: yellow;
-}
+@import 'custom-sass/common';
+@import 'custom-sass/slider';
+@import 'custom-sass/homepage';

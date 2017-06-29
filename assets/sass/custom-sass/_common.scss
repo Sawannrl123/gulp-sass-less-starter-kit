@@ -1,0 +1,21 @@
+.clearfix {
+	&:after {
+		clear: both;
+		content: '';
+		display: block;
+	}
+}
+.pull-left {
+	float: left;
+}
+.pull-right {
+	float: right;
+}
+.common-btn {
+	@include btn(1px solid $day_color, transparent, 1rem, 0, $day_color, 7px 75px 7px 15px, 0, inline-block);
+	position: relative;
+	img {
+		position: absolute;
+		@include abs-pos(5px, 10px, auto, auto);
+	}
+}
