@@ -34,7 +34,7 @@ A super clean and easy to use starter kit for using Gulp, Sass and Less. This sh
     
     $ npm run start
     
-...if you need a local server. Folder **build** serving at [http://localhost:8888](http://localhost:3000)
+...if you need a local server. Folder **build** serving at [http://localhost:3000](http://localhost:3000)
 
 Should use [Livereload extension](http://livereload.com/extensions/). Or inject `<script src="//localhost:35729/livereload.js"></script>` into your page.
 
