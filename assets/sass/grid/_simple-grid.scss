@@ -1,8 +1,10 @@
 // SIMPLE GRID - SASS/SCSS
 
 @import url(https://fonts.googleapis.com/css?family=Lato:400,300,300italic,400italic,700,700italic);
+@import url(https://fonts.googleapis.com/css?family=Roboto:300,400,500,700);
 
 // fonts
+$font-family-two: 'Roboto', sans-serif;
 $font-family: 'Lato', Helvetica, sans-serif;
 $font-weight-light: 300;
 $font-weight-regular: 400;
