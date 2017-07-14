@@ -11,7 +11,7 @@ var gulp = require('gulp'),
 gulp.task('default', ['watch']);
 
 // Run "gulp server"
-gulp.task('server', ['squish-jquery', 'build-js', 'build-css', 'build-font', 'build-images', 'build-html', 'build-index', 'serve', 'watch']);
+gulp.task('server', ['squish-jquery', 'build-js', 'build-css', 'build-font', 'build-images', 'build-html', 'build-php', 'build-index-php', 'build-index-html', 'serve', 'watch']);
 
 // Minify jQuery Plugins: Run manually with: "gulp squish-jquery"
 gulp.task('squish-jquery', function () {
@@ -49,7 +49,16 @@ gulp.task('build-html', function () {
         .pipe(gulp.dest('build/html/'));
 });
 
-gulp.task('build-index', function () {
+gulp.task('build-php', function () {
+    return gulp.src('assets/pages/**/*.php')
+        .pipe(gulp.dest('build/php/'));
+});
+
+gulp.task('build-index-php', function () {
+    return gulp.src('*.php')
+        .pipe(gulp.dest('build/'));
+});
+gulp.task('build-index-html', function () {
     return gulp.src('*.html')
         .pipe(gulp.dest('build/'));
 });
@@ -67,9 +76,9 @@ gulp.task('build-images', function () {
 
 // Sass to CSS: Run manually with: "gulp build-css"
 gulp.task('build-css', function () {
-    return gulp.src('assets/sass/*.scss')
+    return gulp.src('assets/less/*.less')
         .pipe(plugins.plumber())
-        .pipe(plugins.sass())
+        .pipe(plugins.less())
         .on('error', function (err) {
             gutil.log(err);
             this.emit('end');
@@ -96,17 +105,19 @@ gulp.task('build-css', function () {
 gulp.task('watch', function () {
     gulp.watch('assets/js/libs/**/*.js', ['squish-jquery']);
     gulp.watch('assets/js/*.js', ['build-js']);
-    gulp.watch('assets/sass/**/*.scss', ['build-css']);
+    gulp.watch('assets/less/**/*.less', ['build-css']);
     gulp.watch('assets/fonts/*', ['build-font']);
     gulp.watch('assets/pages/**/*.html', ['build-html']);
-    gulp.watch('*.html', ['build-index']);
+    gulp.watch('assets/pages/**/*.php', ['build-php']);
+    gulp.watch('*.php', ['build-index-php']);
+    gulp.watch('*.html', ['build-index-html']);
     gulp.watch('assets/images/**/*', ['build-images']);
 });
 
 // Folder "/" serving at http://localhost:8888
 // Should use Livereload (http://livereload.com/extensions/)
 gulp.task('serve', function () {
-    var server = plugins.serve.static('/build', 3000);
+    var server = plugins.serve.static('/build', 2000);
     server.start();
     gulp.watch(['build/*'], function (file) {
         server.notify.apply(server, [file]);

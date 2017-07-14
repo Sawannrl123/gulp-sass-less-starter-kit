@@ -1,0 +1,235 @@
+* {
+	margin: 0;
+	padding: 0;
+	.box-sizing(border-box);
+	font-family: 'Source Sans Pro', sans-serif !important;
+}
+.cxd-clearfix {
+	.clearfix();
+}
+
+.cxd-body-wrapper {
+	background-color: @common_bg;
+	min-height: 100vh;
+}
+
+.container {
+	width: 90%;
+	margin: 0 auto;
+}
+
+.cxd-pull-right {
+	float: right;
+}
+.cxd-pull-left {
+	float: left;
+} 
+.hidden {
+	display: none;
+}
+
+.cxd-table {
+	display: table;
+	table-layout: fixed;
+	width: 100%;
+	&.cxd-table-full {
+		@media (max-width : 768px) {
+			display: block;
+			border-spacing: 0;
+			table-layout: auto;
+			.cxd-table-cell {
+				display: block;
+				&:not(:last-child) {
+					margin-bottom: 20px;
+				}
+			}
+		}
+	}
+	.cxd-do-nothing {
+		display: table !important;
+		table-layout: fixed !important;
+		width: 100% !important;
+		.cxd-table-cell {
+			display: table-cell !important;
+			vertical-align: middle !important;
+		}
+	}
+}
+.cxd-table-cell {
+	display: table-cell;
+	vertical-align: middle;
+}
+.btn {
+	display: inline-block;
+	.border-radius(5px);
+	text-align: center;
+	text-transform: uppercase;
+	padding: 15px;
+	font-size: @l_font;
+	text-decoration: none;
+	line-height: 1;
+	cursor: pointer;
+	font-weight: 600;
+	position: relative;
+	overflow: hidden;
+}
+
+.cxd-primary-btn {
+	border: 1px solid @day_color;
+	.border-radius(5px);
+	color: @day_color;
+	background-color: transparent;
+	outline: 0;
+	.transition(all .25s linear);
+	&:hover {
+		background-color: @day_color;
+		color: @common_color;
+		border-color: @day_color;
+	}
+}
+
+.cxd-secondary-btn {
+	border: 0;
+	outline: 0;
+	color: @day_color;
+	.transition(all .25s linear);
+	background-color: @primary_color;
+	padding: 10px 15px;
+	&:hover {
+		background-color: darken(@primary_color, 5%);
+	}
+}
+
+.group { 
+	padding: 15px 0;
+	text-align: left;
+	.text-overflow();
+	position:relative; 
+	* {
+		font-weight: 300 !important;
+	}
+	 
+	input {
+		display:block;
+		border:none;
+		border-bottom:1px solid @common_border_color;
+		width: 100%;
+		font-size: @m_font;
+		color: @common_color;
+		height: auto !important;
+		padding: 0 0 5px !important; 
+		background-color: transparent;
+		&.hidden {
+			display: none;
+		}
+	}
+	input:focus          { outline:none; outline: 0;}
+	
+
+	
+	&.is-focussed {
+		.bar-label {
+			top:-3px;
+			font-size:13px !important;
+			left: 0;
+		}
+	}
+	&.is-focussed-color {
+		.bar-label {
+			 color: @primary_color !important; 
+		}
+	}
+	
+	label.bar-label               {
+		color: @floting_label_color !important; 
+		font-weight:normal;
+		position:absolute;
+		pointer-events:none;
+		left:5px;
+		top: 18px;
+		transition:0.2s ease all; 
+		-moz-transition:0.2s ease all; 
+		-webkit-transition:0.2s ease all;
+		font-size: @m_font;
+		max-width: 100% !important;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		overflow: hidden;
+		display:none;
+		width: 100%;
+	}
+	label {
+		
+		  &.req:after {
+		  	padding-left: 3px;
+			color: #ea7162;
+			content: "*";
+			font-size: 13px;
+			line-height: 1px;
+		  }
+	}
+	
+	
+	
+	.bar    { position:relative; display:block; }
+	.bar:before, .bar:after     {
+		content:'';
+		height:2px; 
+		width:0;
+		bottom:0; 
+		position:absolute;
+		background:@primary_color; 
+		transition:0.2s ease all; 
+		-moz-transition:0.2s ease all; 
+		-webkit-transition:0.2s ease all;
+	}
+	.bar:before {
+		left:50%;
+	}
+	.bar:after {
+		right:50%; 
+	}
+	i {
+		font-size: @s_font !important;
+		color: @error_color !important;
+	}
+	
+	input:focus ~ .bar:before, 
+	input:focus ~ .bar:after {
+		width:50%;
+	}
+	@-webkit-keyframes inputHighlighter {
+		from { background:@primary_color; }
+		to    { width:0; background:transparent; }
+	}
+	@-moz-keyframes inputHighlighter {
+		from { background:@primary_color; }
+		to    { width:0; background:transparent; }
+	}
+	@keyframes inputHighlighter {
+		from { background:@primary_color; }
+		to    { width:0; background:transparent; }
+	}
+}
+
+/* Ripple Effect */
+
+.ripple {
+	width: 0;
+	height: 0;
+	border-radius: 50%;
+	background: rgba(255, 255, 255, 0.4);
+	transform: scale(0);
+	position: absolute;
+	opacity: 1;
+}
+.rippleEffect {
+	animation: rippleDrop .6s linear;
+}
+
+@keyframes rippleDrop {
+	100% {
+		transform: scale(2);
+		opacity: 0;
+	}
+}
