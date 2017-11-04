@@ -1,3 +1,13 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.page-wrapper {
+    * {
+        font-family: 'Roboto', sans-serif;
+        @include box-sizing(border-box);
+    }
+}
 .clearfix {
 	&:after {
 		clear: both;
@@ -5,103 +15,10 @@
 		display: block;
 	}
 }
-
-.body-wrapper {
-	animation: fadein 2s;
-    -moz-animation: fadein 2s; /* Firefox */
-    -webkit-animation: fadein 2s; /* Safari and Chrome */
-    -o-animation: fadein 2s; /* Opera */
+.site-container {
+    width: 90%;
+    margin: 0 auto;
 }
-
-.section-two-content,
-.gallary-content .row .col-4,
-.footer .container,
-.contact-section-two .display-table,
-.contact-section-three form {
-	position: relative;
-	top: 0;
-	&.start {
-		top: 100px;
-		-webkit-animation: moveup 1s ease-out forwards;
-	   -moz-animation: moveup 1s ease-out forwards;
-	    -ms-animation: moveup 1s ease-out forwards;
-	     -o-animation: moveup 1s ease-out forwards;
-	        animation: moveup 1s ease-out forwards;
-	}
-}
-
-@keyframes moveup {
-    0% {
-        top: 100px;
-    }
-
-    100% {
-        top: 0;
-    }
-}
-
-@-moz-keyframes moveup {
-    0% {
-        top: 100px;
-    }
-
-    100% {
-        top: 0;
-    }
-}
-
-@-webkit-keyframes moveup {
-	0% {
-        top: 100px;
-    }
-
-    100% {
-        top: 0;
-    }
-}
-@-o-keyframes moveup {
-	0% {
-        top: 100px;
-    }
-
-    100% {
-        top: 0;
-    }
-}
-
-@keyframes fadein {
-    from {
-        opacity:0;
-    }
-    to {
-        opacity:1;
-    }
-}
-@-moz-keyframes fadein { /* Firefox */
-    from {
-        opacity:0;
-    }
-    to {
-        opacity:1;
-    }
-}
-@-webkit-keyframes fadein { /* Safari and Chrome */
-    from {
-        opacity:0;
-    }
-    to {
-        opacity:1;
-    }
-}
-@-o-keyframes fadein { /* Opera */
-    from {
-        opacity:0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
 .pull-left {
 	float: left;
 }
@@ -118,12 +35,26 @@
 	vertical-align: middle;
 }
 
-.common-btn {
-	@include btn(1px solid $day_color, transparent, 1rem, 0, $day_color, 7px 75px 7px 15px, 0, inline-block);
-	position: relative;
-	font-family: $font-family-two;
-	img {
-		position: absolute;
-		@include abs-pos(5px, 10px, auto, auto);
-	}
+.btn {
+    display: inline-block;
+    padding: 10px 30px;
+    @include border-radius(5px);
+    border: 0;
+    overflow: hidden;
+    cursor: pointer;
+    outline: 0;
+    vertical-align: middle;
+    text-align: center;
+    white-space: nowrap;
+    position: relative;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    @include box-shadow(0, 0, 10px, rgba(0, 0, 0, .1));
+    margin: 10px 0;
+    @include transition(.2s all linear);
+    @media(max-width: 480px) {
+        font-size: 13px;
+        padding: 10px;
+    }
 }
