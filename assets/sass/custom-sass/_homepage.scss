@@ -1,7 +1,10 @@
 .home-banner {
 	position: relative;
-	background-image: url('../images/home_banner.jpg');
-	height: 100vh;
+	background-image: url('../images/banner.jpg');
+	@include calc(height, '100vh - 80px');
+	@media(max-width: 600px) {
+		@include calc(height, '100vh - 50px');
+	}
 	overflow: hidden;
 	background-color: #404040;
 	background-repeat: no-repeat;
@@ -18,7 +21,7 @@
 		left: 0;
 		right: 0;
 		z-index: 1;
-		background-color: rgba(0, 0, 0, .5);
+		background-color: rgba(0, 0, 0, .8);
 	}
 }
 
@@ -93,15 +96,29 @@
 				display: block;
 			}
 			&:first-child {
-				background-image: url('../images/bg-quote-indianrailways.jpg');
+				background-image: url('../images/cera_info.jpg');
 				background-repeat: no-repeat;
 				background-position: center;
 				background-size: cover;
 				background-color: #446173;
+				position: relative;
+				&:after {
+					content: '';
+					display: block;
+					width: 100%;
+					position: absolute;
+					top: 0;
+					bottom: 0;
+					left: 0;
+					right: 0;
+					background-color: rgba(0, 0, 0, .6);
+				}
 				p {
 					line-height: 1.5;
 					color: #fff;
 					text-align: center;
+					position: relative;
+					z-index: 2;
 					&:first-child {
 						font-size: 24px;
 						font-weight: 300;
@@ -120,12 +137,13 @@
 				}
 			}
 			&:last-child {
-				background-color: #ff5458;
+				background-color: #93a8b3;
 				.secOne-inner-content {
 					li, p {
 						color: #fff;
 					}
 					ul {
+						margin: 0 !important;
 						li {
 							list-style-type: circle;
 						}
@@ -201,10 +219,16 @@
 		font-size: 16px;
 		&:hover {
 			background-color: #fff;
-			color: #243640;
+			color: #243640 !important;
 		}
 		@media(max-width: 640px) {
 			padding: 15px 30px;
 		}
+	}
+}
+
+.l-section-h {
+	@media(max-width: 1023px) {
+		padding: 0 !important;
 	}
 }
