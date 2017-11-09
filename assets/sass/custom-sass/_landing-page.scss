@@ -3,12 +3,17 @@
 	height: auto;
 	text-align: left;
 	padding: 25px 0;
+	min-height: 100vh;
+	@media (min-width: 769px) {
+		.lp-banner-content {
+			margin: 10vh 0;
+		}
+	}
 }
 
 .lp-site-container {
 	position: relative;
 	z-index: 2;
-	max-width: 1000px;
 	margin: 0 auto;
 	width: 90%;
 	@media(max-width: 768px) {
@@ -18,7 +23,6 @@
 }
 
 .lp-banner-content {
-	margin-top: 20px;
 	.wpcf7 {
 	    background: #fff;
 	    padding: 20px;
@@ -108,6 +112,76 @@
 				font-size: 15px;
 			}
 		}
+	}
+	.lp-img {
+		max-width: 160px;
+		@include border-radius(50%);
+		display: block;
+		overflow: hidden;
+		line-height: 1;
+		img {
+			max-width: 100%;
+		}
+	}
+}
+.lp-profile-image {
+	float: left;
+	width: 160px;
+	text-align: center;
+	div {
+		margin-top: 10px;
+		a {
+			font-weight: 300;
+			font-size: 18px;
+		}
+		p {
+			font-weight: 300;
+			font-size: 13px;
+			font-style: italic;
+			color: #ddd;
+			margin: 0 !important;
+			&:not(:last-child) {
+				margin-top: 5px !important;
+			}
+		}
+	}
+}
+.lp-profile-content {
+	float: right;
+	@include calc(width, '100% - 190px');
+	h1 {
+		font-size: 24px;
+		font-weight: 400;
+		margin-bottom: 15px;
+	}
+	p {
+		font-weight: 300;
+		font-size: 18px;
+		margin: 0 !important;
+		&:not(:last-child) {
+			margin-bottom: 10px !important;
+		}
+	}
+}
+
+.lp-profile-info {
+	margin-top: 20px;
+	p {
+		font-weight: 300;
+		font-size: 18px;
+		margin: 0 !important;
+		&:not(:last-child) {
+			margin-bottom: 10px !important;
+		}
+	}
+}
+
+.lp-profile-btn {
+	background-color: #ff5458;
+	margin-top: 30px;
+	&:hover {
+		background-color: darken(#ff5458, 5%);
+		color: #fff !important;
 	}
 }
 
