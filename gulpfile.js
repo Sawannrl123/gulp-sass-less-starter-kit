@@ -11,7 +11,7 @@ var gulp = require('gulp'),
 gulp.task('default', ['watch']);
 
 // Run "gulp server"
-gulp.task('server', ['squish-jquery', 'build-js', 'build-css', 'build-font', 'build-images', 'build-html', 'build-index', 'serve', 'watch']);
+gulp.task('server', ['squish-jquery', 'build-js', 'build-css', 'build-font', 'build-html', 'build-index', 'serve', 'watch']);
 
 // Minify jQuery Plugins: Run manually with: "gulp squish-jquery"
 gulp.task('squish-jquery', function () {
@@ -62,7 +62,7 @@ gulp.task('build-images', function () {
             plugins.imagemin.optipng({optimizationLevel: 5}),
             plugins.imagemin.svgo({plugins: [{removeViewBox: true}]})
         ]))
-        .pipe(gulp.dest('build/images'));
+        .pipe(gulp.dest('build/images')).on('error', gutil.log);
 });
 
 // Sass to CSS: Run manually with: "gulp build-css"

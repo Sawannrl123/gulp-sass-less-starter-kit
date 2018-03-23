@@ -1,16 +1,12 @@
 {
-  "name": "zaiiux",
-  "version": "1.0.1",
-  "description": "This is demo project",
+  "name": "TeamAppWeb",
+  "version": "1.0.0",
+  "description": "Auriga Team App Website",
   "main": " ",
   "scripts": {
     "start": "gulp server"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/scotch-io/gulp-and-less-starter-kit"
-  },
-  "author": "Sawan Nirala",
+  "author": "AurigaIT",
   "license": "MIT",
   "devDependencies": {
     "gulp": "^3.8.10",

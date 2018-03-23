@@ -1,104 +1,175 @@
 body {
     &::-webkit-scrollbar {
-        width: 6px;
+        width: 3px;
         background-color: #F5F5F5;
     }
     &::-webkit-scrollbar-thumb {
-        background-color: #ff5458;
+        background-color: $indigo;
     }
     &::-webkit-scrollbar-track {
-        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+        -webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
+        box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
         background-color: #F5F5F5;
     }
-} 
+}
+
 * {
     margin: 0;
     padding: 0;
 }
+
 @font-face {
-    font-family: "Roboto";
-    src: url("../fonts/Roboto-Thin.ttf");
-    font-weight: 100;
-}
-@font-face {
-    font-family: "Roboto";
-    src: url("../fonts/Roboto-Light.ttf");
+    font-family: "Montserrat";
+    src: url("../fonts/Montserrat-Light.ttf");
     font-weight: 300;
 }
+
 @font-face {
-    font-family: "Roboto";
-    src: url("../fonts/Roboto-Regular.ttf");
+    font-family: "Montserrat";
+    src: url("../fonts/Montserrat-Regular.ttf");
     font-weight: 400;
 }
+
 @font-face {
-    font-family: "Roboto";
-    src: url("../fonts/Roboto-Bold.ttf");
+    font-family: "Montserrat";
+    src: url("../fonts/Montserrat-Medium.ttf");
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src: url("../fonts/Montserrat-SemiBold.ttf");
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src: url("../fonts/Montserrat-Bold.ttf");
     font-weight: 700;
 }
+
 .page-wrapper {
     * {
-        font-family: 'Roboto', sans-serif;
+        font-family: 'Montserrat', sans-serif;
         @include box-sizing(border-box);
     }
     img {
         max-width: 100%;
     }
 }
-.clearfix {
-	&:after {
-		clear: both;
-		content: '';
-		display: block;
-	}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
+
+.clearfix {
+    &:after {
+        clear: both;
+        content: '';
+        display: block;
+    }
+}
+
 .site-container {
     width: 90%;
     margin: 0 auto;
 }
+
 .pull-left {
-	float: left;
-}
-.pull-right {
-	float: right;
-}
-.display-table {
-	width: 100%;
-	display: table;
-	table-layout: fixed;
-}
-.display-table-cell {
-	display: table-cell;
-	vertical-align: middle;
+    float: left;
 }
 
-.new-btn {
-    display: inline-block;
-    padding: 10px 30px;
+.pull-right {
+    float: right;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"] {
+    width: 100%;
+    display: block;
+    height: 45px;
     @include border-radius(5px);
-    border: 0;
-    overflow: hidden;
-    cursor: pointer;
+    padding: 5px 10px;
+    @include box-sizing(border-box);
+    background-color: $light_gray;
+    color: $black;
+    font-size: $font_15;
+    font-weight: 500;
+    border: 1px solid darken($light_gray, 10%);
     outline: 0;
-    vertical-align: middle;
-    text-align: center;
-    white-space: nowrap;
-    position: relative;
-    font-size: 15px;
+}
+
+textarea {
+    width: 100%;
+    display: block;
+    height: 100px;
+    @include border-radius(5px);
+    padding: 10px;
+    @include box-sizing(border-box);
+    background-color: $light_gray;
+    color: $black;
+    font-size: $font_15;
+    font-weight: 500;
+    border: 1px solid darken($light_gray, 10%);
+    outline: 0;
+    resize: none;
+}
+
+.btn {
+    @include box-sizing(border-box);
+    @include border-radius(35px);
+    background-color: $purple;
+    @include box-shadow(0px 0px 8px 2px rgba(0,
+    0,
+    0,
+    .2));
+    font-size: $font_24;
+    border: 0;
+    outline: 0;
+    min-width: 225px;
+    padding: 10px;
     font-weight: 600;
+    cursor: pointer;
+    text-align: center;
     text-decoration: none;
-    @include box-shadow(0, 0, 10px, rgba(0, 0, 0, .1));
-    margin: 10px 0;
-    @include transition(.2s all linear);
-    @media(max-width: 480px) {
-        font-size: 13px;
-        padding: 10px;
+    color: $white;
+    min-width: 200px;
+    display: inline-block;
+    @media(max-width: 1024px) {
+        font-size: $font_20;
+    }
+    @media(max-width: 768px) {
+        font-size: $font_18;
+    }
+    &:hover {
+        background-color: darken( $purple, 10%)
+    }
+    &.btn-outline {
+        border: 1px solid $white;
+        background-color: transparent;
+        @include box-shadow(0 0 0 rgba(0,
+        0,
+        0,
+        0));
     }
 }
 
-.os-card {
-    padding: 15px;
-    background-color: #fff;
-    @include box-shadow(0, 0, 15px, rgba(0, 0, 0, .1));
-    @include border-radius(5px);
-    overflow: hidden;
+.visible-phone {
+    @media(min-width: 769px) {
+        display: none;
+    }
+}
+
+.hidden-phone {
+    @media(max-width: 768px) {
+        display: none;
+    }
+}
+
+.hidden {
+    display: none;
 }

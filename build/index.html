@@ -21,66 +21,185 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="images/favicon/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
-    <title>Outsell-Landing page 2 | Outsell | Online Sales Training | Gamification| Playday | Product Knowledge</title>
+    <title>Auriga TeamBook</title>
     <link rel="stylesheet" href="css/styles.css">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700" rel="stylesheet">
 </head>
 <body>
     
     <div class="page-wrapper">
-        <div class="home-banner">
-            <div class="home-banner-content">
-                <h1>Your partner in Sales Training</h1>
-                <h5>Improve Product Knowledge to increase Sales conversations that win.<br>Increase Cross-selling and Upselling Opportunities. Beat Sales Targets.</h5>
-                <div class="home-banner-btn">
-                    <a href="#" class="new-btn">
-                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 19 28">
-                            <title>chevron-right</title>
-                            <path d="M17.297 13.703l-11.594 11.594c-0.391 0.391-1.016 0.391-1.406 0l-2.594-2.594c-0.391-0.391-0.391-1.016 0-1.406l8.297-8.297-8.297-8.297c-0.391-0.391-0.391-1.016 0-1.406l2.594-2.594c0.391-0.391 1.016-0.391 1.406 0l11.594 11.594c0.391 0.391 0.391 1.016 0 1.406z" fill="#fff"></path>
-                        </svg>
-                        <span>Request a Demo</span>
+        <div class="landing-page-wrapper">
+            <ul class="header-wrapper">
+                <li class="logo-part">
+                    <a href="https://www.aurigait.com/" class="aurigaLogo">
+                        <img src="images/auriga-it-logo-1.png" alt="AurigaIT">
                     </a>
+                    <a href="./" class="teamBookLogo">
+                        <img src="images/bitmap.png" alt="TeamBook">
+                    </a>
+                </li><li class="menu-part">
+                    <span class="menu-icon visible-phone">
+                        <img src="images/menu.svg" alt="Menu" height="24px">
+                    </span>
+                    <ul class="hidden-phone">
+                        <li id="pricing_link">
+                            <a href="#pricing">Pricing</a>
+                        </li>
+                        <li id="contact_link">
+                            <a href="#contact-us">Contact us</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="main-content">
+                <div class="content-left">
+                    <div class="contentLeft-upper">
+                        <h1>The <span>"Official"</span> Phonebook</h1>
+                        <p>Contact information of your Team at your finger tips. Connect instantly at critical times, whether it be discussions, meetings
+                        or finding the right blood group or people you can car pool with.</p>
+                        <div class="button-container">
+                            <button type="button" class="btn btn-outline" id="take_tour">
+                                <img src="images/play-button-1.svg" alt="Play">
+                                <span>Take a tour</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="contentLeft-bottom first">
+                        <ul>
+                            <li>
+                                <img src="images/smartphone-1.svg" alt="Register with official email">
+                                <p>Register with<br> official email</p>
+                            </li><li>
+                                <img src="images/smartphone-3.svg" alt="Create your own company directory">
+                                <p>Create your own<br> company directory</p>
+                            </li><li>
+                                <img src="images/smartphone-2.svg" alt="Find every co-worker’s details at one place">
+                                <p>Find every co-worker's<br> details at one place</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div><div class="content-right">
+                    <div class="demo-image">
+                        <img src="images/mobile.png" alt="Mobile">
+                        <div class="red-circle"></div>
+                        <div class="yellow-circle"></div>
+                    </div>
+                    <div class="download-link">
+                        <a href="#"><img src="images/google-play-badge.svg" alt="Play Store"></a>
+                        <a href="#"><img src="images/app-store-badge.svg" alt="iTune"></a>
+                    </div>
+                    
+                </div>
+                <div class="contentLeft-bottom last">
+                    <ul>
+                        <li>
+                            <img src="images/smartphone-1.svg" alt="Register with official email">
+                            <p>Register with<br> official email</p>
+                        </li><li>
+                            <img src="images/smartphone-3.svg" alt="Create your own company directory">
+                            <p>Create your own<br> company directory</p>
+                        </li><li>
+                            <img src="images/smartphone-2.svg" alt="Find every co-worker’s details at one place">
+                            <p>Find every co-worker's<br> details at one place</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="circle-5">
+                <div class="circle-4">
+                    <div class="circle-3">
+                        <div class="circle-2">
+                            <div class="circle-1"></div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="home-sec-one">
-            <div class="display-table">
-                <div class="display-table-cell">
-                    <div class="secOne-inner-content">
-                        <p>"Because the online system for reserved tickets was so slow, during peak times, people used to have to go to stations, wait in long lines and book tickets at railway counters. But now, more bookings are being done on the Internet than in person and there are hardly any lines at the counters."</p>
-                        <p>Suneeti Goel, Chief Project Engineer, Centre for Railway<br> Information Systems</p>
+    </div>
+
+    <div class="app-video hidden page-wrapper">
+        <video id="myVideo" controls onclick="myFunction()">
+            <source src="images/teambook.mp4" type="video/mp4">
+        </video>
+        <span id="close_video" class="close-video"><img src="images/cancel.svg" alt="Close"><span>Exit</span></span>
+    </div>
+
+    <div id="pricing" class="hidden pricing-page page-wrapper">
+        <div class="static-page-wrapper pricing-wrapper">
+            <div class="static-card pricing-card">
+                <div class="card-wrapper">
+                    <img src="images/group-2.svg" alt="fish" class="fish">
+                    <img src="images/line.svg" alt="line" class="line">
+                    <img src="images/aquarium.svg" alt="line" class="aquarium">
+                    <h2>Basic</h2>
+                    <p>Yes it’s free upto 25 members</p>
+                    <a href="#" class="btn">Free</a>
+                </div>
+            </div>
+            <div class="static-card pricing-card">
+                <div class="card-wrapper">
+                    <img src="images/group-3.svg" alt="line" class="aquarium">
+                    <h2>Enterprise</h2>
+                    <p>Numbers don’t matter here</p>
+                    <a href="#" class="btn" id="contact_btn">Contact us</a>
+                </div>
+            </div>
+        </div>
+        <span id="pricing_close" class="close-video">
+            <img src="images/cancel.svg" alt="Close">
+            <span>Exit</span>
+        </span>
+        <div class="circle-5">
+            <div class="circle-4">
+                <div class="circle-3">
+                    <div class="circle-2">
+                        <div class="circle-1"></div>
                     </div>
                 </div>
-                <div class="display-table-cell">
-                    <div class="secOne-inner-content">
-                        <p>Case Study</p>
-                        <p>Outsell</p>
-                        <div class="secOne-points">
-                            <p>Challenges</p>
-                            <ul>
-                                <li>Insufficient capacity in old system to meet demand of over 20 million daily passengers</li>
-                                <li>System crashes and slow system performance during peak demand that exceeded 40,000 concurrent users</li>
-                                <li>Frustrating and cumbersome experience for customers trying to purchase tickets forced many to buy in person rather than electronically</li>
-                            </ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="contact" class="hidden pricing-page page-wrapper contact-wrapper">
+        <div class="static-page-wrapper pricing-wrapper">
+            <div class="static-card pricing-card">
+                <div class="card-wrapper">
+                    <h2>We are all ears!</h2>
+                    <form method="POST">
+                        <div class="fluid-row">
+                            <div class="col-6">
+                                <input type="text" placeholder="Name">
+                            </div>
+                            <div class="col-6">
+                                <input type="email" placeholder="Email">
+                            </div>
                         </div>
-                        <div class="secOne-points">
-                            <p>Solution</p>
-                            <ul>
-                                <li>Pivotal GemFire</li>
-                            </ul>
+                        <div class="fluid-row">
+                            <div class="col-6">
+                                <input type="text" placeholder="Phone number">
+                            </div>
+                            <div class="col-6">
+                                <input type="text" placeholder="Organization name (optional)">
+                            </div>
                         </div>
-                        <div class="secOne-points">
-                            <p>Key Benefits</p>
-                            <ul>
-                                <li>Support more than 200,000 concurrent purchases without impacting system performance</li>
-                                <li>Provides the stable performance to book approximately 150,000 tickets per hour, compared to 60,000 in the old system</li>
-                                <li>Transformed customer experience – reservation transactions complete in seconds, instead of 15 minutes</li>
-                                <li>Shifted online purchasing from 50% of tickets sold to 65%, boosting revenue generated from e-ticket sales to INR600 million daily</li>
-                            </ul>
+                        <div class="textarea">
+                            <textarea placeholder="Message"></textarea>
                         </div>
-                        <div class="secOne-btn">
-                            <a href="#" class="new-btn">View Full Case Study</a>
-                        </div>
+                        <button type="submit" class="btn">Submit</a>
+                    </form>
+                </div>
+                <p class="contact-info">You can mail us on <a href="mailto:sales@aurigait.com">sales@aurigait.com</a> or <a href="tel:+919660968941">+919660968941</a></p>
+            </div>
+        </div>
+        <span id="contact_close" class="close-video">
+            <img src="images/cancel.svg" alt="Close">
+            <span>Exit</span>
+        </span>
+        <div class="circle-5">
+            <div class="circle-4">
+                <div class="circle-3">
+                    <div class="circle-2">
+                        <div class="circle-1"></div>
                     </div>
                 </div>
             </div>
