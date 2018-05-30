@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="645px" height="176px" viewBox="0 0 645 176" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="597" height="128" rx="64"></rect>
+        <filter x="-8.0%" y="-19.1%" width="115.9%" height="174.2%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="23" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="12" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.324558424 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <polygon id="path-3" points="13.5 64 0 64 0 0 13.5 0 27 0 27 64"></polygon>
+    </defs>
+    <g id="join_q" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Homepage" transform="translate(-1261.000000, -1025.000000)">
+            <g id="Group" transform="translate(1285.000000, 1026.000000)">
+                <g id="login_with_facebook">
+                    <g id="Rectangle">
+                        <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                        <use fill="#0A4F83" fill-rule="evenodd" xlink:href="#path-1"></use>
+                    </g>
+                    <g id="facebook-letter-logo" transform="translate(67.000000, 31.000000)">
+                        <mask id="mask-4" fill="white">
+                            <use xlink:href="#path-3"></use>
+                        </mask>
+                        <g id="Clip-2"></g>
+                        <path d="M5.83518838,12.3955556 L5.83518838,21.2044444 L0,21.2044444 L0,31.9786667 L5.83518838,31.9786667 L5.83518838,64 L17.8221534,64 L17.8221534,31.9822222 L25.8662282,31.9822222 C25.8662282,31.9822222 26.6199333,26.816 26.9871436,21.1662222 L17.8687578,21.1662222 L17.8687578,13.7982222 C17.8687578,12.6977778 19.1744837,11.2186667 20.4681567,11.2186667 L27,11.2186667 L27,0 L18.1170466,0 C5.54029522,0 5.83518838,10.7848889 5.83518838,12.3955556 Z" id="Fill-1" fill="#FFFFFF" mask="url(#mask-4)"></path>
+                    </g>
+                </g>
+                <text id="Login-with-Facebook" font-family="Montserrat-Bold, Montserrat" font-size="37" font-weight="bold" letter-spacing="-0.8923528" fill="#FFFFFF">
+                    <tspan x="145.469852" y="76">Login with Facebook</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>

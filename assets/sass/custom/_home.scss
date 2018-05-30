@@ -1,0 +1,122 @@
+.home-wrapper {
+    background-image: url('images/bg.jpg');
+    background-color: $c-theme-bg;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.content-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 40px);
+    text-align: center;
+}
+
+.content {
+    max-width: 650px;
+    @include center-block();
+}
+
+.logo {
+    margin-bottom: 10px;
+    img {
+        @media(max-width: 640px) {
+            max-width: 125px;
+        }
+    }
+}
+
+.title {
+    font-size: $f-size + 8;
+    @include font-size($f-size+8,
+    $f-size);
+    color: $c-theme;
+    line-height: $font-height;
+    font-weight: $font-semibold;
+    margin-bottom: 10px;
+    @media(max-width: 640px) {
+        font-size: $f-size + 4;
+        @include font-size($f-size+4,
+        $f-size);
+    }
+}
+
+.info {
+    font-size: $f-size + 4;
+    @include font-size($f-size+4,
+    $f-size);
+    color: $c-white;
+    line-height: $font-height - 0.2;
+    font-weight: $font-medium;
+    margin-bottom: 40px;
+    @media(max-width: 640px) {
+        font-size: $f-size;
+        @include font-size($f-size,
+        $f-size);
+    }
+}
+
+.get-button {
+    display: inline-block;
+    padding: 10px 10px 10px 30px;
+    @include border-radius(50px);
+    background-color: rgba(255, 255, 255, .3);
+    .bt,
+    a {
+        display: inline-block;
+        vertical-align: middle;
+        color: $c-white;
+    }
+    .bt {
+        @include font-size($f-size+10,
+        $f-size);
+        font-weight: $font-bold;
+        padding: 0 20px;
+        @media(max-width: 640px) {
+            font-size: $f-size+6;
+            @include font-size($f-size+6,
+            $f-size);
+        }
+    }
+    @media(max-width: 582px) {
+        .bt {
+            margin-bottom: 10px;
+        }
+    }
+    @media(max-width: 562px) {
+        padding: 10px;
+        background-color: rgba(255, 255, 255, 0);
+    }
+    @media(max-width: 360px) {
+        padding: 0;
+    }
+}
+
+.fb-button {
+    padding: 12px 30px 12px 20px;
+    @include border-radius(50px);
+    background-color: $c-fb;
+    outline: none;
+    @include transition(all .2s ease);
+    &:hover {
+        background-color: darken($c-fb, 10%);
+    }
+    span {
+        display: inline-block;
+        vertical-align: middle;
+        color: $c-white;
+        @include font-size($f-size,
+        $f-size);
+        font-weight: $font-bold;
+    }
+    .icon {
+        margin-right: 15px;
+        @include font-size($f-size+$f-size,
+        $f-size);
+        font-weight: $font-regular;
+    }
+}
