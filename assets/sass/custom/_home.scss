@@ -1,5 +1,5 @@
 .home-wrapper {
-    background-image: url('images/bg.jpg');
+    background-image: url('../images/bg.jpg');
     background-color: $c-theme-bg;
     background-size: cover;
     background-position: center;
@@ -9,18 +9,61 @@
 }
 
 .content-wrapper {
-    display: flex;
     justify-content: center;
     align-items: center;
     min-height: calc(100vh - 40px);
     text-align: center;
 }
 
-.content {
-    max-width: 650px;
-    @include center-block();
+.flex {
+    display: flex;
+    @media(max-width: 768px) {
+        flex-direction: column-reverse;
+    }
 }
 
+.flex-item {
+    @media(min-width: 769px) {
+        flex: 1;
+        margin-right: 10px;
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+    @media(max-width: 768px) {
+        &:not(:last-child) {
+            margin-bottom: 20px;
+        }
+    }
+}
+
+.hidden-mobile {
+    @media(max-width: 768px) {
+        display: none;
+    }
+}
+
+.video {
+    padding: 20px;
+    @include box-sizing(border-box);
+    @include border-radius(5px);
+}
+
+.visible-mobile {
+    display: none;
+    @media(max-width: 768px) {
+        display: block;
+    }
+}
+
+.buffer-top-20 {
+    margin-top: 20px;
+}
+
+// .content {
+//     max-width: 650px;
+//     @include center-block();
+// }
 .logo {
     margin-bottom: 10px;
     img {
