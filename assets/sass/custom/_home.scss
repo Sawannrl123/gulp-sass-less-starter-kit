@@ -44,14 +44,10 @@
 }
 
 .video {
-    padding: 20px;
+    padding: 10px;
     @include box-sizing(border-box);
     @include border-radius(5px);
     background-color: $c-white;
-    .info,
-    .bt {
-        color: $c-black;
-    }
 }
 
 .visible-mobile {
