@@ -1,0 +1,95 @@
+.form-page {
+    .flex-item {
+        @media(max-width: 768px) {
+            width: 100%;
+        }
+    }
+}
+
+.form-group {
+    max-width: 600px;
+    @include center-block();
+}
+
+.form-wrapper {
+    background-color: $c-white;
+    max-width: 600px;
+    @include center-block();
+    padding: 20px;
+    @include border-radius(5px);
+    @include box-sizing(border-box);
+}
+
+.form-control {
+    position: relative;
+    &:not(.last) {
+        margin-bottom: 30px;
+    }
+}
+
+.form-input {
+    width: 100%;
+    display: block;
+    height: 45px;
+    @include border-radius(5px);
+    background-clip: padding-box;
+    padding: 5px 10px;
+    @include box-sizing(border-box);
+    background-color: $c-input-bg;
+    color: $c-text;
+    font-size: $f-size - 1;
+    font-weight: 500;
+    border: 1px solid $c-input-border;
+    outline: 0;
+}
+
+.form-textarea {
+    width: 100%;
+    display: block;
+    height: 100px;
+    @include border-radius(5px);
+    @include box-sizing(border-box);
+    background-color: $c-input-bg;
+    color: $c-text;
+    font-size: $f-size - 1;
+    font-weight: 500;
+    border: 1px solid $c-input-border;
+    resize: none;
+    padding: 10px;
+    outline: 0;
+}
+
+.btn {
+    box-sizing: border-box;
+    border-radius: 35px;
+    background-color: $c-theme;
+    @include box-shadow(0 0 8px 2px rgba(0, 0, 0, .2));
+    font-size: $f-size + 8;
+    border: 0;
+    font-weight: 600;
+    cursor: pointer;
+    text-align: center;
+    color: $c-white;
+    min-width: 200px;
+    display: inline-block;
+    outline: 0;
+    @include transition(.2s all ease);
+    padding: 10px;
+    @include box-sizing(border-box);
+    &:hover {
+        background-color: darken($c-theme, 10%);
+    }
+    @media(max-width: 1024px) {
+        font-size: $f-size + 4;
+    }
+}
+
+.help-block {
+    font-weight: 300;
+    font-size: $f-size - 4;
+    margin-top: 5px;
+    text-align: left;
+    color: $c-error;
+    position: absolute;
+    bottom: -15px;
+}
